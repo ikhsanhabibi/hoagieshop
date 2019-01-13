@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @feedback.comment %>
+</p>
+
+  <%# Display full and blank stars depend on the rating value%>
+<p>
+  <strong>Rating:</strong>
+  <%= @feedback.rating.to_i.times do  %>
+    <%= image_tag 'fullstar.png' %>
+  <% end -%>
+  <%= @feedback.blank_stars.to_i.times do  %>
+    <%= image_tag 'blankstar.png' %>
+  <% end -%>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @feedback.image.thumb.url %>
+</p>
+
+<%= link_to 'Edit', edit_feedback_path(@feedback) %> |
+<%= link_to 'Back', feedbacks_path %>
