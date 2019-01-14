@@ -3865,3 +3865,913 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/people/12" for 127.0.0.1 at 2019-01-14 21:26:11 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/people/12"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-14 21:26:13 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreatePeople (20190114202728)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "people" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190114202728_create_people.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190114202728"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-14 20:27:34.213270"], ["updated_at", "2019-01-14 20:27:34.213270"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:27:47 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 252ms (Views: 244.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2019-01-14 21:27:49 +0100
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (6.2ms)
+  Rendered people/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 33ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:27:54 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1PV5EYBjJalPy/T4fUURKVhlT1N++itNzHU3Di2iKeRD0cRL6e3wE8L6kl0y1vWkVeQPGN8j14I+mHtpR91iwQ==", "person"=>{"name"=>"Ikhsan", "email"=>"", "password"=>"[FILTERED]", "phone"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[36mPerson Create (0.5ms)[0m  [1m[32mINSERT INTO "people" ("name", "email", "password", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ikhsan"], ["email", ""], ["password", ""], ["phone", ""], ["created_at", "2019-01-14 20:27:54.054588"], ["updated_at", "2019-01-14 20:27:54.054588"]]
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+Redirected to http://localhost:3000/people/1
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2019-01-14 21:27:54 +0100
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  Rendering people/show.html.erb within layouts/application
+  Rendered people/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:27:54 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:31:44 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:31:46 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2019-01-14 21:31:47 +0100
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.3ms)
+  Rendered people/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:31:48 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"brhA1v+CRB9fBRjiYbTxQ0NHzk+euvMYFk3+BEQ3/735nP2MlgyRpdI0fkcuJxXOTsaOBD9jD9fkoLJjLki0mA==", "person"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "phone"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[36mPerson Create (0.3ms)[0m  [1m[32mINSERT INTO "people" ("name", "email", "password", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["email", ""], ["password", ""], ["phone", ""], ["created_at", "2019-01-14 20:31:48.688832"], ["updated_at", "2019-01-14 20:31:48.688832"]]
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+Redirected to http://localhost:3000/people/2
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/people/2" for 127.0.0.1 at 2019-01-14 21:31:48 +0100
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  Rendering people/show.html.erb within layouts/application
+  Rendered people/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 24ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:31:50 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2019-01-14 21:31:51 +0100
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.4ms)
+  Rendered people/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2019-01-14 21:33:07 +0100
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (1.9ms)
+  Rendered people/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:33:08 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"35WDjDAjsIZTdsJzdtcWXOzhE1Gixw7lNXpxy6Zagai36+FK46bqLk0qVmmcCBDK/9ph88yZUB0GVa8wj6so3w==", "person"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "phone"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[36mPerson Create (0.3ms)[0m  [1m[32mINSERT INTO "people" ("name", "email", "password", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["email", ""], ["password", ""], ["phone", ""], ["created_at", "2019-01-14 20:33:08.735470"], ["updated_at", "2019-01-14 20:33:08.735470"]]
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+Redirected to http://localhost:3000/people/3
+Completed 302 Found in 5ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/people/3" for 127.0.0.1 at 2019-01-14 21:33:08 +0100
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  Rendering people/show.html.erb within layouts/application
+  Rendered people/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 22ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:33:10 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:34:01 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 184ms (Views: 177.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:34:02 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:34:02 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:34:02 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/people/1" for 127.0.0.1 at 2019-01-14 21:34:04 +0100
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qW77+z0rJhilz9dN18e1Orf+c1G0xXnHTD1T5uQV6cfBEJk97q58sLuTQ1c9GLOspMUB89qbJz9/Eo0dzeRAsA==", "id"=>"1"}
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+  [1m[36mPerson Destroy (0.3ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/people_controller.rb:57
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+Redirected to http://localhost:3000/people
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:34:04 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 21ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/people/2" for 127.0.0.1 at 2019-01-14 21:34:06 +0100
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RTf36C419ueEi5z+KkqjrXHDPDzE5+rECTTpcBEJlbctSZUu/bCsT5rXCOTAlaU7YvhOnqq5tDw6GzeLOPg8wA==", "id"=>"2"}
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+  [1m[36mPerson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/people_controller.rb:57
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+Redirected to http://localhost:3000/people
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:34:06 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/people/3" for 127.0.0.1 at 2019-01-14 21:34:07 +0100
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JzZv0bUqq/qLtjjavp2anU//kn6BDFhoF4v6HhY7CI5PSA0XZq/xUpXqrMBUQpwLXMTg3O9SBpAkpCTlP8qh+Q==", "id"=>"3"}
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+  [1m[36mPerson Destroy (0.3ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/people_controller.rb:57
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+Redirected to http://localhost:3000/people
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:34:07 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2019-01-14 21:34:08 +0100
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (7.8ms)
+  Rendered people/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 33ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:34:09 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rILboZMMC0fVKVMa0FbhtxpWy4rled7PHLi1s3Gt4Es7pmb7+oLe/VgYNb+fxQU6F9eLwUSgIgDuVfnUG9Krbg==", "person"=>{"name"=>"", "email"=>"", "password"=>"[FILTERED]", "phone"=>""}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[36mPerson Create (0.4ms)[0m  [1m[32mINSERT INTO "people" ("name", "email", "password", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", ""], ["email", ""], ["password", ""], ["phone", ""], ["created_at", "2019-01-14 20:34:09.121975"], ["updated_at", "2019-01-14 20:34:09.121975"]]
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+Redirected to http://localhost:3000/people/4
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/people/4" for 127.0.0.1 at 2019-01-14 21:34:09 +0100
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  Rendering people/show.html.erb within layouts/application
+  Rendered people/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 21ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:34:12 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.3ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:36:48 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2019-01-14 21:36:49 +0100
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (4.8ms)
+  Rendered people/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2019-01-14 21:40:26 +0100
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.9ms)
+  Rendered people/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 35ms (Views: 24.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:40:37 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0V7h3VhqAcL305hmRLhls905meA5+1EYUMLTjZYjmJW5IIMbi+9baumPDHyuZ2MlzgLrQlelD+Bj7Q12v9Ix4g==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (13.8ms)
+  Rendered people/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 37ms (Views: 33.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:33 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iRfvv+K42dNpHR35skklxLwdzll859Q/87Oo9nww8A7haY15MT2De3dBieNYliNSrya8+xK5isfAnHYNVcFZeQ==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.9ms)
+  Rendered people/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 31ms (Views: 20.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:34 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lo8lpt4MHyn8+B1agxfHnVIcXt8epMpxccAa1ruNqgVG8UdgDYlFgeKkiUBpyMELQScsfXD6lIlC78QtknwDcg==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.4ms)
+  Rendered people/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 25ms (Views: 22.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:35 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXn8wrvNx2DdxHGlK+BAlzI6Y5zxcer0LSf2cp6qKaTVB54EaEidyMOY5b/BP0YBIQERPp8vtAweCCiJt1uA0w==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.8ms)
+  Rendered people/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:35 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DLTH4bRtaZOiqBqIs5HpmIWBPW0tsEkADjBOK6QLifNkyqUnZ+gzO7z0jpJZTu8OlrpPz0PuF/g9H5DQjfoghA==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.6ms)
+  Rendered people/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:35 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vN2XWYWHOHbob2AHzT72byDcnleZ8CZ+V8+aR4nnsYzUo/WfVgJi3vYz9B0n4fD5M+fs9feueIZk4ES8oBYY+w==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (4.2ms)
+  Rendered people/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:35 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+E0AOH6dduc3esahNtJi3KY74mFJ6aDa4DMs3AbRjiyQM2L+rRgsTykmUrvcDWRKtQCQwye3/iLTHPInLyAnWw==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.0ms)
+  Rendered people/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:35 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t7LdjKzPOzE17K0Ai/QDzEBB7cCSujvFoQZn/oANpmzfzL9Kf0phmSuwORphKwVaU3qfYvzkZT2SKbkFqfwPGw==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.8ms)
+  Rendered people/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:36 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PK5rppxIWb/AnnnytTG6dcU328lAvAUw5zuwJaNwETtU0AlgT80DF97C7ehf7rzj1gypay7iW8jUFG7eioG4TA==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.8ms)
+  Rendered people/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:36 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xdWlSzws9sRoEumTudA3mpXd3iwaNiYPkjWikwsBA3Ctq8eN76msbHZOfYlTDzEMhuasjnRoePehGnxoIvCqBw==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.2ms)
+  Rendered people/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:36 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"08/wGJw+O+y82CXTUxzXMfSwxt+wZxmzCUOINzer2FW7sZLeT7thRKKEscm5w9Gn54u0fd45R0s6bFbMHlpxIg==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.6ms)
+  Rendered people/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:36 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WxDmbLhKQs4NcJWVyOLbCPSoM1irB2toy5g0aSQ39igzboSqa88YZhMsAY8iPd2e55NB+sVZNZD4t+qSDcZfXw==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.8ms)
+  Rendered people/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 24ms (Views: 21.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:36 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cjB5rcjLChJNl96kNsBWe9We1URnezeqJ5JK1XGKueoaThtrG05QulPLSr7cH1DtxqWn5gklaVIUvZQuWHsQnQ==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.5ms)
+  Rendered people/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:37 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I+3wCDGB7Fe/6l3P48l6h2vNt0LoPT8A9spBYBn0609Lk5LO4gS2/6G2ydUJFnwRePbF4IZjYfjF5Z+bMAVCOA==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.7ms)
+  Rendered people/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 32ms (Views: 28.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:37 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p5srIbpEYB8lktb5nUTNJET6IspDaHn78zw5bmeuGN3P5UnnacE6tzvOQuN3m8uyV8FQaC02JwPAE+eVTl+xqg==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.8ms)
+  Rendered people/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:37 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lVluYkMhRsQwS7E7raLYDR+9rdFPrjIDelPtAy5gdRP9JwykkKQcbC4XJSFHfd6bDIbfcyHwbPtJfDP4B5HcZA==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.7ms)
+  Rendered people/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 23ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:37 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LUzI3qKimm9oLxfbG2J8CPGSioZjvX2HMyLVa/RYKmhFMqoYcSfAx3Zzg8HxvXqe4qn4JA3jI38ADQuQ3amDHw==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.7ms)
+  Rendered people/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 26ms (Views: 22.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:37 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OObyMGGqcMZKsylSavGTPv/0ZmbQzMbF0iqDbViKOgZQmJD2si8qblTvvUiALpWo7M8UxL6SmD3hBV2WcXuTcQ==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.7ms)
+  Rendered people/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:37 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zITQ66DWr4KPmdsqdTD+A4ImKByhtUPa27BXvo8W6w+k+rItc1P1KpHFTzCf7/iVkR1avs/rHSLon4lFpudCeA==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.2ms)
+  Rendered people/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:38 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8doPV+zcD6/qqGqRRY+CNTfA+i1VgywlnEaw46Ycg5iZpG2RP1lVB/T0/ouvUISjJPuIjzvdct2vaW4Yj+0q7w==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.7ms)
+  Rendered people/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 26ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:38 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xmpKJw/Y/LD5GKPx6/prluL6wh/JGa087ssAbfcC2K2uFCjh3F2mGOdEN+sBJW0A8cGwvadH88Td5N6W3vNx2g==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.5ms)
+  Rendered people/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:38 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cSaYwGJY1mwiGAQxCRRYpuRKjwE+PXxQA+y91sQPHugZWPoGsd2MxDxEkCvjy14w93H9o1BjIqgww2Mt7f63nw==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.6ms)
+  Rendered people/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:38 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"euwwWXIpvXBACRzSSfgXp6yEYPOs571x0utztFSjazwSklKfoazn2F5ViMijJxExv78SUcK544nhxK1PfVLCSw==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (4.7ms)
+  Rendered people/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:38 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G7Z5WZMSgclLtDty5mVE5KIOxEQzLBhtFc/oNmyD0K1zyBufQJfbYVXor2gMukJysTW25l1yRpUm4DbNRXJ52g==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.6ms)
+  Rendered people/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:43 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YnHRQjTsAcI3RkwWyk6FExly6pxrcH0CV8rR/MLxsgMKD7OE52lbaika2AwgkYOFCkmYPgUuI/pk5Q8H6wAbdA==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.1ms)
+  Rendered people/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:43 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"By9NvHYqF0ZMM+A4KpWJo2YpUl4yFWIYs3UzYSG0kp5vUS96pa9N7lJvdCLASo81dRIg/FxLPOCAWu2aCEU76Q==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.6ms)
+  Rendered people/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:43 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E05xzrWBBHvsssFUL4w68O/jRtlpU4ZhFcMBatkuixZ7MBMIZgRe0/LuVU7FUzxm/Ng0ewcN2Jkm7N+R8N8iYQ==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.7ms)
+  Rendered people/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:44 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uv6eiYljcPTGDWF9Ue51+u6lr5xEIKTYVIX1TJOB3+LSgPxPWuYqXNhR9We7MXNs/Z7dPip++iBnqiu3unB2lQ==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.9ms)
+  Rendered people/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:44 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zdy+uqb46fVHhjd/fn6iWYizviu8KukQ7Eeq1bBvnhQNotx8dX2zXVnao2WUoaTPm4jMidJ0t+jfaHQumZ43Yw==", "person"=>{"name"=>"a", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.2ms)
+  Rendered people/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:41:53 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h37iD2/fyDRwd6CQwBr4lH7PoPEXypbDywR5iOVHD87vAIDJvFqSnG4rNIoqxf4CbfTSU3mUyDv4K6dzzLamuQ==", "person"=>{"name"=>"a", "email"=>"a@testttt.com", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.3ms)
+  Rendered people/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 24ms (Views: 21.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:42:09 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2UFkvJ/ousVG0NcVjeKrmy0nQLtfyQ1aUxLmgUVL1q2xPwZ6TG3gbViMQw9nPa0NPhwyGTGXU6JgPTh6bLp/2g==", "person"=>{"name"=>"a", "email"=>"a@testttt.com", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.2ms)
+  Rendered people/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 29ms (Views: 19.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:42:10 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gq8nZ6euQ98t14wdcVs6De/U3dcVNSQXSFCfPo9TIfJy0UWhdCsZdzOLGAebhDyb/O+vdXtreu97f0HFpqKIhQ==", "person"=>{"name"=>"a", "email"=>"a@testttt.com", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.5ms)
+  Rendered people/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:42:11 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/hNUCAtXmvEVgqrjj7Ggc/avl783IZFZsWupJvodkpeWbTbO2NLAWQvePvllbqbl5ZTlHVl/z6GCRHfd0+w74A==", "person"=>{"name"=>"a", "email"=>"a@testttt.com", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.4ms)
+  Rendered people/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-14 21:42:17 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5HEPJ/fAlhrzkbb59XzvDhzGbO7RggUx6sOqhadGP2iMD23hJEXMsu3NIuMfo+mYD/0eTL/cW8nZ7HR+jreWHw==", "person"=>{"name"=>"a", "email"=>"a@testttt.com", "password"=>"[FILTERED]", "phone"=>"03791"}, "commit"=>"Create Person"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[36mPerson Create (0.3ms)[0m  [1m[32mINSERT INTO "people" ("name", "email", "password", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "a"], ["email", "a@testttt.com"], ["password", "aöhdksjksa"], ["phone", "03791"], ["created_at", "2019-01-14 20:42:17.753301"], ["updated_at", "2019-01-14 20:42:17.753301"]]
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+Redirected to http://localhost:3000/people/5
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/people/5" for 127.0.0.1 at 2019-01-14 21:42:17 +0100
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  Rendering people/show.html.erb within layouts/application
+  Rendered people/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:42:31 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 27ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/people/5" for 127.0.0.1 at 2019-01-14 21:42:33 +0100
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wXb2DHreEZwrgyJNZeHMDrqvmSv7OqUz86gGU86M0iypCJTKqVtLNDXftlePPsqYqZTriZVk+8vAh9io5317Ww==", "id"=>"5"}
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+  [1m[36mPerson Destroy (0.3ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/people_controller.rb:57
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+Redirected to http://localhost:3000/people
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:42:33 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 19.0ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/people/4" for 127.0.0.1 at 2019-01-14 21:42:35 +0100
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BlrxwYvqtCAG3+V71N1QERPn+CIaTGqN2Y+S4qD0JxVuJJMHWG/uiBiDcWE+AlaHANyKgHQSNHXqoEwZiQWOYg==", "id"=>"4"}
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+  [1m[36mPerson Destroy (0.2ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/people_controller.rb:57
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+Redirected to http://localhost:3000/people
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-14 21:42:35 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms)
+
+
