@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paymenttype: MyString
+  amount: 
+  date: 2019-01-14
+  description: MyString
+  accountnr: MyString
+
+two:
+  paymenttype: MyString
+  amount: 
+  date: 2019-01-14
+  description: MyString
+  accountnr: MyString
