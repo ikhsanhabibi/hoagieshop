@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bf90166-e8b6-4e0f-b731-ad6ea88a4180" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/17/13c4f1983737ed" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/17/13c4f1983737ed" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/3a/391940827c5c16" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/3a/391940827c5c16" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/42/baf3524ecdb971" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/42/baf3524ecdb971" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/49/c7eff20ffd541e" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/49/c7eff20ffd541e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/65/ffef6874daede0" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/65/ffef6874daede0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/6f/9920d9b161d868" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/6f/9920d9b161d868" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/88/37e6f274a7d438" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/88/37e6f274a7d438" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/93/d35842e9588277" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/93/d35842e9588277" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c4/0027632166b5b2" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c4/0027632166b5b2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c4/3707bd9df29ac9" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/c4/3707bd9df29ac9" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/cd/d2aa0e545f504c" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/cd/d2aa0e545f504c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/d4/b98e3de910066d" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/d4/b98e3de910066d" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/df/011c2726725428" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/df/011c2726725428" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/e1/38a32d47b1aa23" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-compile-cache/e1/38a32d47b1aa23" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/cache/bootsnap-load-path-cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -46,7 +32,17 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -72,7 +68,6 @@
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/migrate/20190112173154_create_people.rb" />
         <option value="$PROJECT_DIR$/app/models/person.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/models/article.rb" />
         <option value="$PROJECT_DIR$/app/views/articles/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/person/index.html.erb" />
@@ -81,6 +76,7 @@
         <option value="$PROJECT_DIR$/app/views/articles/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/articles_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/articles/index.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
       </list>
     </option>
   </component>
@@ -284,12 +280,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11171000" />
+    <option name="totallyTimeSpent" value="11273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="829" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49802372" visible="true" weight="0.19313304" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49802372" visible="true" weight="0.19313304" />
       <window_info id="Structure" order="1" sideWeight="0.5019763" side_tool="true" weight="0.24320458" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -302,7 +299,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32971507" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" visible="true" weight="0.31343284" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" visible="true" weight="0.31343284" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.31343284" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49928468" weight="0.3283582" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -431,13 +428,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/articles/show.html.erb" />
     <entry file="file://$PROJECT_DIR$/app/models/article.rb" />
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -457,5 +447,12 @@
     <entry file="file://$PROJECT_DIR$/app/views/articles/edit.html.erb" />
     <entry file="file://$PROJECT_DIR$/app/views/articles/new.html.erb" />
     <entry file="file://$PROJECT_DIR$/app/views/articles/_form.html.erb" />
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
