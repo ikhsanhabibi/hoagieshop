@@ -4974,3 +4974,102 @@ Processing by PaymentsController#index as HTML
 Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/payments" for 127.0.0.1 at 2019-01-14 19:35:05 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PaymentsController#index as HTML
+  Rendering payments/index.html.erb within layouts/application
+  [1m[36mPayment Load (0.1ms)[0m  [1m[34mSELECT "payments".* FROM "payments"[0m
+  ↳ app/views/payments/index.html.erb:18
+  Rendered payments/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 500ms (Views: 488.0ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/payments/8" for 127.0.0.1 at 2019-01-14 19:35:08 +0100
+Processing by PaymentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/1jxefflFiIMJs7OS/588tD4Ujae3gwjy2gNHu3uoZaXJpO/JGBMihJ6WtShIXpkw8MglPCAUtv4R9PlxB8I4Q==", "id"=>"8"}
+  [1m[36mPayment Load (0.2ms)[0m  [1m[34mSELECT  "payments".* FROM "payments" WHERE "payments"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/payments_controller.rb:57
+  [1m[36mPayment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "payments" WHERE "payments"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/payments_controller.rb:57
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/payments_controller.rb:57
+Redirected to http://localhost:3000/payments
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/payments" for 127.0.0.1 at 2019-01-14 19:35:08 +0100
+Processing by PaymentsController#index as HTML
+  Rendering payments/index.html.erb within layouts/application
+  [1m[36mPayment Load (0.2ms)[0m  [1m[34mSELECT "payments".* FROM "payments"[0m
+  ↳ app/views/payments/index.html.erb:18
+  Rendered payments/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/payments/new" for 127.0.0.1 at 2019-01-14 19:35:08 +0100
+Processing by PaymentsController#new as HTML
+  Rendering payments/new.html.erb within layouts/application
+  Rendered payments/_form.html.erb (22.2ms)
+  Rendered payments/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/payments" for 127.0.0.1 at 2019-01-14 19:35:17 +0100
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tbSIkwGEgURJ1ftkDXjcs5j4G+1oXEgijKYlmmIanip3Evb+5CLHa7EIXpS7/5mtNLwcwrj46Ldevf2SVvbO2A==", "payment"=>{"paymenttype"=>"Credit Card", "amount"=>"1000", "date(1i)"=>"2019", "date(2i)"=>"1", "date(3i)"=>"14", "description"=>"ddsdsa", "accountnr"=>"1000"}, "commit"=>"Create Payment"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/payments_controller.rb:30
+  [1m[36mPayment Create (0.3ms)[0m  [1m[32mINSERT INTO "payments" ("paymenttype", "amount", "date", "description", "accountnr", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["paymenttype", "Credit Card"], ["amount", 1000.0], ["date", "2019-01-14"], ["description", "ddsdsa"], ["accountnr", "1000"], ["created_at", "2019-01-14 18:35:17.973705"], ["updated_at", "2019-01-14 18:35:17.973705"]]
+  ↳ app/controllers/payments_controller.rb:30
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/payments_controller.rb:30
+Redirected to http://localhost:3000/payments/9
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/payments/9" for 127.0.0.1 at 2019-01-14 19:35:17 +0100
+Processing by PaymentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mPayment Load (0.1ms)[0m  [1m[34mSELECT  "payments".* FROM "payments" WHERE "payments"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:67
+  Rendering payments/show.html.erb within layouts/application
+  Rendered payments/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/payments" for 127.0.0.1 at 2019-01-14 19:35:19 +0100
+Processing by PaymentsController#index as HTML
+  Rendering payments/index.html.erb within layouts/application
+  [1m[36mPayment Load (0.2ms)[0m  [1m[34mSELECT "payments".* FROM "payments"[0m
+  ↳ app/views/payments/index.html.erb:18
+  Rendered payments/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/payments/9" for 127.0.0.1 at 2019-01-14 19:35:22 +0100
+Processing by PaymentsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g3NygPCGf1zmRKtfiEZyYpuI4H1RNK7h4qVP9Eu41BLrDRBGIwMl9PgYP0VimXT0iLOS3z9q8BnRipEPYkl9ZQ==", "id"=>"9"}
+  [1m[36mPayment Load (0.1ms)[0m  [1m[34mSELECT  "payments".* FROM "payments" WHERE "payments"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/payments_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/payments_controller.rb:57
+  [1m[36mPayment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "payments" WHERE "payments"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/payments_controller.rb:57
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/payments_controller.rb:57
+Redirected to http://localhost:3000/payments
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/payments" for 127.0.0.1 at 2019-01-14 19:35:22 +0100
+Processing by PaymentsController#index as HTML
+  Rendering payments/index.html.erb within layouts/application
+  [1m[36mPayment Load (0.1ms)[0m  [1m[34mSELECT "payments".* FROM "payments"[0m
+  ↳ app/views/payments/index.html.erb:18
+  Rendered payments/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.1ms)
+
+
