@@ -4133,3 +4133,133 @@ Processing by AddressesController#index as HTML
 Completed 200 OK in 37ms (Views: 34.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/address" for 127.0.0.1 at 2019-01-14 19:30:50 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/address"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/addresses" for 127.0.0.1 at 2019-01-14 19:30:54 +0100
+Processing by AddressesController#index as HTML
+  Rendering addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/addresses/index.html.erb:18
+  Rendered addresses/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 549ms (Views: 542.7ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/addresses/3" for 127.0.0.1 at 2019-01-14 19:30:57 +0100
+Processing by AddressesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"khpOVZNZteYkrk44puoinQevWmkz3Or3n+efBr9F0JX6ZCyTQNzvTjry2iJMNSQLFJQoy12CtA+syEH9lrR54g==", "id"=>"3"}
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/addresses_controller.rb:57
+  [1m[36mAddress Destroy (0.4ms)[0m  [1m[31mDELETE FROM "addresses" WHERE "addresses"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/addresses_controller.rb:57
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/addresses_controller.rb:57
+Redirected to http://localhost:3000/addresses
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/addresses" for 127.0.0.1 at 2019-01-14 19:30:57 +0100
+Processing by AddressesController#index as HTML
+  Rendering addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/addresses/index.html.erb:18
+  Rendered addresses/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/addresses/new" for 127.0.0.1 at 2019-01-14 19:30:58 +0100
+Processing by AddressesController#new as HTML
+  Rendering addresses/new.html.erb within layouts/application
+  Rendered addresses/_form.html.erb (14.1ms)
+  Rendered addresses/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/addresses" for 127.0.0.1 at 2019-01-14 19:31:03 +0100
+Processing by AddressesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LwcGiDO7wtgcTyhdNnIb/diN99+X0UC45HUw+77rOw72SDdQyHp10i+2vaVoGA9ByO3C9sgx0zpCmxX6vslbbA==", "address"=>{"street"=>"dsadas", "number"=>"dsadas", "postcode"=>"dasdsa", "city"=>"dasdsa", "country"=>"ewdwe"}, "commit"=>"Create Address"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/addresses_controller.rb:30
+  [1m[36mAddress Create (0.4ms)[0m  [1m[32mINSERT INTO "addresses" ("street", "number", "postcode", "city", "country", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["street", "dsadas"], ["number", "dsadas"], ["postcode", "dasdsa"], ["city", "dasdsa"], ["country", "ewdwe"], ["created_at", "2019-01-14 18:31:03.293363"], ["updated_at", "2019-01-14 18:31:03.293363"]]
+  ↳ app/controllers/addresses_controller.rb:30
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/addresses_controller.rb:30
+Redirected to http://localhost:3000/addresses/4
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/addresses/4" for 127.0.0.1 at 2019-01-14 19:31:03 +0100
+Processing by AddressesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAddress Load (0.1ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:67
+  Rendering addresses/show.html.erb within layouts/application
+  Rendered addresses/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/addresses" for 127.0.0.1 at 2019-01-14 19:31:04 +0100
+Processing by AddressesController#index as HTML
+  Rendering addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.3ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/addresses/index.html.erb:18
+  Rendered addresses/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/addresses/4" for 127.0.0.1 at 2019-01-14 19:31:07 +0100
+Processing by AddressesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"t37L0Tv0Q5JxSf2UUNOYgkS7hzcGpylDVRgXaK9kfwPfAKkX6HEZOm8VaY66DJ4UV4D1lWj5d7tmN8mThpXWdA==", "id"=>"4"}
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/addresses_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/addresses_controller.rb:57
+  [1m[36mAddress Destroy (0.3ms)[0m  [1m[31mDELETE FROM "addresses" WHERE "addresses"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/addresses_controller.rb:57
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/addresses_controller.rb:57
+Redirected to http://localhost:3000/addresses
+Completed 302 Found in 6ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/addresses" for 127.0.0.1 at 2019-01-14 19:31:07 +0100
+Processing by AddressesController#index as HTML
+  Rendering addresses/index.html.erb within layouts/application
+  [1m[36mAddress Load (0.2ms)[0m  [1m[34mSELECT "addresses".* FROM "addresses"[0m
+  ↳ app/views/addresses/index.html.erb:18
+  Rendered addresses/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
