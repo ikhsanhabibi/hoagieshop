@@ -4775,3 +4775,452 @@ Processing by PeopleController#index as HTML
 Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.2ms)
 
 
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "people"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "people" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190114202728)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-15 18:20:30.699538"], ["updated_at", "2019-01-15 18:20:30.699538"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "people"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "people" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190114202728)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-15 18:20:30.714911"], ["updated_at", "2019-01-15 18:20:30.714911"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.2ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2019-01-15 18:20:30.717372"], ["key", "environment"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/people" for 127.0.0.1 at 2019-01-15 19:21:05 +0100
+  
+ActionController::RoutingError (uninitialized constant PeopleController):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `block in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:74:in `rescue in load_missing_constant'
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/active_support.rb:56:in `load_missing_constant'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.2) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.2) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.2) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:21:07 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:21:35 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:21:36 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:21:43 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:21:44 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:21:44 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:21:44 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 7ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:21:44 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreatePeople (20190115182321)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "people" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email_string" varchar, "password" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190115182321_create_people.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190115182321"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-15 18:23:27.894226"], ["updated_at", "2019-01-15 18:23:27.894226"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:26:24 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (3.1ms)
+Completed 200 OK in 13ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:26:24 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:26:45 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.3ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:26:46 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.5ms)
+Completed 200 OK in 14ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:26:46 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:26:46 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (2.6ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-15 19:26:46 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreatePeople (20190115182708)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190115182708_create_people.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "people" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190115182708_create_people.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+Migrating to CreatePeople (20190115182752)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "people" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "phone" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190115182752_create_people.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190115182752"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-01-15 18:27:57.281672"], ["updated_at", "2019-01-15 18:27:57.281672"]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/bin/rake:23
+Started GET "/people" for 127.0.0.1 at 2019-01-15 19:30:38 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 583ms (Views: 574.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2019-01-15 19:30:41 +0100
+Processing by PeopleController#new as HTML
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (16.3ms)
+  Rendered people/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 50ms (Views: 36.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-15 19:30:51 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GvFv76wuMoXlD8hElp/kOWo+yqdenvGLZ4yCN3Y8sic9c1litmYut7/yv9TeDutQj0K77vLbzl8h2ppfIvolBQ==", "person"=>{"name"=>"Ikhsan", "email"=>"a", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.9ms)
+  Rendered people/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-15 19:30:57 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BcxgbO+GsoD4ryR1Tm/5gtRzHZrNHRXSMwALqm7XIlP3v6tPOt//4+q95YPioBKx4r6Mp1CN+1wORG65ic/6cg==", "person"=>{"name"=>"Ikhsan", "email"=>"a@testttt.com", "password"=>"[FILTERED]", "phone"=>"a"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (3.0ms)
+  Rendered people/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 32ms (Views: 28.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-15 19:31:03 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gRM+77b3wP6k1yophvZA9kqVDtuM9/7xKlRz0S/JRkFzYPXMY66NnbbF698qOavFfFif5hFnEH8XEBbCyNGeYA==", "person"=>{"name"=>"Ikhsan", "email"=>"a@testttt.com", "password"=>"[FILTERED]", "phone"=>"+98619863183"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  Rendering people/new.html.erb within layouts/application
+  Rendered people/_form.html.erb (2.8ms)
+  Rendered people/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2019-01-15 19:31:08 +0100
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7FriiW0102l74gARA/4OvCSY8eMfO+ldPH79kCtA0/EeKSmquGyeCmnwweevMeWPElVg3oKrB9MBOpiDzFgL0A==", "person"=>{"name"=>"Ikhsan", "email"=>"a@testttt.com", "password"=>"[FILTERED]", "phone"=>"+98619863183"}, "commit"=>"Create Person"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+  [1m[36mPerson Create (0.6ms)[0m  [1m[32mINSERT INTO "people" ("name", "email", "password", "phone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ikhsan"], ["email", "a@testttt.com"], ["password", "21dsdas"], ["phone", "+98619863183"], ["created_at", "2019-01-15 18:31:08.764917"], ["updated_at", "2019-01-15 18:31:08.764917"]]
+  ↳ app/controllers/people_controller.rb:30
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:30
+Redirected to http://localhost:3000/people/1
+Completed 302 Found in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2019-01-15 19:31:08 +0100
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  Rendering people/show.html.erb within layouts/application
+  Rendered people/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-15 19:31:09 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/people/1" for 127.0.0.1 at 2019-01-15 19:31:22 +0100
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"G3nvESQ/rD0c8BzOdtUGR1yzXVSwvaUqhV5VqHDmweXpCiQy8WbhXg7i3TjaGu10an7MaS0tS6S4GjC7l/4ZxA==", "id"=>"1"}
+  [1m[36mPerson Load (0.1ms)[0m  [1m[34mSELECT  "people".* FROM "people" WHERE "people"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/people_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+  [1m[36mPerson Destroy (0.3ms)[0m  [1m[31mDELETE FROM "people" WHERE "people"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/people_controller.rb:57
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/people_controller.rb:57
+Redirected to http://localhost:3000/people
+Completed 302 Found in 5ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2019-01-15 19:31:22 +0100
+Processing by PeopleController#index as HTML
+  Rendering people/index.html.erb within layouts/application
+  [1m[36mPerson Load (0.2ms)[0m  [1m[34mSELECT "people".* FROM "people"[0m
+  ↳ app/views/people/index.html.erb:17
+  Rendered people/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
