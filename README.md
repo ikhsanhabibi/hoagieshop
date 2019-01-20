@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+HTW Berlin
 
-Things you may want to cover:
+INFO3 Hoagie Shop Project 
 
-* Ruby version
+Manh Cuong Tran - Ikhsan Habibi - Julia Rakowiecka
 
-* System dependencies
 
-* Configuration
+Accounts for testing:
 
-* Database creation
+member@example.com
+123456
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+admin@admin.com
+123456
