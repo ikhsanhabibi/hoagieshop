@@ -1,6 +1,9 @@
 <h1>Welcome to Hoagieshop</h1>
 
 <% if current_user %>
+  <%= link_to 'Ingredients', products_path %>
+
+  <%= link_to 'Make an order',new_order_path %>
 
   <%= link_to 'Change Personal Details',edit_user_registration_path %>
 
@@ -9,6 +12,8 @@
   
 
 <% else %>
+  <%= link_to 'Ingredients', products_path %>
+
   <%= link_to 'Sign up', new_user_registration_path %>
 
   <%= link_to 'Sign in', new_user_session_path %>
@@ -16,7 +21,6 @@
 
 <% end %>
 
-<%= link_to 'Ingredients', products_path %>
 
 
 
