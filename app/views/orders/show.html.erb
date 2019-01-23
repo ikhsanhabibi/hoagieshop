@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Breadtype:</strong>
+  <%= @order.breadtype %>
+</p>
+
+<p>
+  <strong>Ingredient:</strong>
+  <%= @order.ingredient %>
+</p>
+
+<p>
+  <strong>Vegetable:</strong>
+  <%= @order.vegetable %>
+</p>
+
+<p>
+  <strong>Condiment:</strong>
+  <%= @order.condiment %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @order.amount %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

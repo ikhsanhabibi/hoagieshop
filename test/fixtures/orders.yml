@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  breadtype: MyString
+  ingredient: MyString
+  vegetable: MyString
+  condiment: MyString
+  price: 9.99
+  amount: 1
+
+two:
+  breadtype: MyString
+  ingredient: MyString
+  vegetable: MyString
+  condiment: MyString
+  price: 9.99
+  amount: 1
