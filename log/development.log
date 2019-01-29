@@ -11028,3 +11028,1794 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:56:40 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 3466ms (Views: 3445.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-29 19:56:45 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 56ms (Views: 46.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:56:47 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-29 19:56:48 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.5ms)
+Completed 200 OK in 100ms (Views: 84.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-29 19:57:35 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eCm24sFnbpArvp5vkxtF40mjS+VAqBhVKMQcmGHQpZVBD2O6T+OMF/HLybiqHnV0AYsVeDWlgoNWbKQ/EhxTxw==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 146ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:57:35 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-29 19:57:41 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:42
+  Rendered products/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:57:43 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-29 19:57:46 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:57:48 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 64ms (Views: 61.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 19:57:50 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (6.8ms)
+  Rendered orders/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 64ms (Views: 50.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2019-01-29 19:57:56 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4YpubnbPb7kRqkbomXmGamG0W6wHBleNFdg2zNGvOSfYWVWs0Itkf9p8QZ4WPPdbCVevO0ouMjdd40KcHDos0Q==", "order"=>{"breadtype"=>"White bread", "ingredient"=>"None", "vegetable"=>["Tomato", "Lettuce", "Onions", "Cucumber"], "condiment"=>"None", "amount"=>""}, "commit"=>"Create Order"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:30
+  [1m[36mOrder Create (2.4ms)[0m  [1m[32mINSERT INTO "orders" ("breadtype", "ingredient", "vegetable", "condiment", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["breadtype", "White bread"], ["ingredient", "None"], ["vegetable", "Tomato, Lettuce, Onions, Cucumber"], ["condiment", "None"], ["created_at", "2019-01-29 18:57:56.468522"], ["updated_at", "2019-01-29 18:57:56.468522"]]
+  ↳ app/controllers/orders_controller.rb:30
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:30
+Redirected to http://localhost:3000/orders/9
+Completed 302 Found in 7ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/orders/9" for 127.0.0.1 at 2019-01-29 19:57:56 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 19:57:59 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/9/edit" for 127.0.0.1 at 2019-01-29 19:58:03 +0100
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/edit.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.9ms)
+  Rendered orders/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 60ms (Views: 54.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 19:58:06 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/9" for 127.0.0.1 at 2019-01-29 19:58:10 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 56ms (Views: 52.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 19:58:11 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:58:12 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-29 19:58:16 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"z/PHnbJtFvzaXG18E7kIUpUaUl8aEjPcM9DCQt7qJQA1L1hK4DezPnsC8w8xWZJRDYzdFDy4GOVlobOl06lHsw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:58:16 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-29 19:58:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-29 19:58:28 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mQ+pAHDkRswlhrnOd0nCnUR71zgvc7qk4o0MBmgbt+x4vOQK5l6k9WAkI/178DcpPMvzap3hyd7j2QJPh4hBug==", "user"=>{"email"=>"member@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "member@example.com"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 130ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:58:29 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 19:58:32 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (2.7ms)
+  Rendered orders/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 19:58:33 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 65ms (Views: 61.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/9/edit" for 127.0.0.1 at 2019-01-29 19:58:38 +0100
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/edit.html.erb within layouts/application
+  Rendered orders/_form.html.erb (6.1ms)
+  Rendered orders/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 19:58:40 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 55ms (Views: 50.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:58:41 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-29 19:58:43 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:58:46 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 56ms (Views: 53.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-29 19:58:48 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:42
+  Rendered products/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:58:49 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-29 19:58:50 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vTcBrJ5mIhibjMl/rSb/+hDaMrfGxH+iFEiVm1OfPCLtPbB83yicp9MZTRg8LzsPBnOxRyhxNpIAoX+R4Uo6WQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 19:58:50 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-29 20:00:03 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-29 20:00:06 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j2OOE+kEdAP/fA4FJwHQ7Wp4MyknYOMFr13U50Tjc1uze/xopLF1PvVkL4FR4nF4PLn+53z2VthvSbX/x1FkxA==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 128ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:00:06 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:00:09 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (3.7ms)
+  Rendered orders/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:00:10 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/orders/9" for 127.0.0.1 at 2019-01-29 20:00:13 +0100
+Processing by OrdersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kT3QMxUXE9rkmL8RAyZNP5TQU5ooBHnQ1J+XoOwqfZlIEI3GKqrkQlXI1BGFZ/52RlIux9HZFDtnOjB5nL6wVw==", "id"=>"9"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:57
+  [1m[36mOrder Destroy (0.3ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/orders_controller.rb:57
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:57
+Redirected to http://localhost:3000/orders
+Completed 302 Found in 5ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:00:13 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:00:14 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-29 20:00:16 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iHs982myIGpEMRYH8GE+8aiHqeB6WeHyk/JRTCrhn/dRVmAGVg/X8vVhfQd2II24egXUvYOEjBkgV/aVWnVSOQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:00:16 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-29 20:00:17 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 51ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-29 20:00:20 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IGIHpuKy9ZwT2xXx/OZmfCkApDtJrD+ZOTQCHHxtIT6lo9fQG1f4NE0gzK9J7PGbgnVwzWIIwavLcjnjdLDXPg==", "user"=>{"email"=>"member@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "member@example.com"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 131ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:00:20 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-29 20:00:23 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 53ms (Views: 50.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:00:24 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:00:25 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (3.4ms)
+  Rendered orders/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 59ms (Views: 57.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:00:26 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:01:39 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (3.8ms)
+  Rendered orders/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 54ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2019-01-29 20:01:48 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U/KArd4Eqd7ORDtwSXD167k0+EWf8YaPuutPYhH+XQnKWwb+axL2HF1AI0QKH9pgswF2Cl1EcJJZr216d6XkYw==", "order"=>{"breadtype"=>"White bread", "ingredient"=>"Chicken", "vegetable"=>["Tomato", "Lettuce", "Onions", "Cucumber"], "condiment"=>"Ketchup", "amount"=>"10"}, "commit"=>"Create Order"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:30
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("breadtype", "ingredient", "vegetable", "condiment", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["breadtype", "White bread"], ["ingredient", "Chicken"], ["vegetable", "Tomato, Lettuce, Onions, Cucumber"], ["condiment", "Ketchup"], ["amount", 10], ["created_at", "2019-01-29 19:01:48.379671"], ["updated_at", "2019-01-29 19:01:48.379671"]]
+  ↳ app/controllers/orders_controller.rb:30
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:30
+Redirected to http://localhost:3000/orders/10
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:01:48 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:01:50 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:01:54 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 54ms (Views: 51.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders/10/edit" for 127.0.0.1 at 2019-01-29 20:01:56 +0100
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/edit.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.0ms)
+  Rendered orders/edit.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 53ms (Views: 50.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:01:59 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 57ms (Views: 53.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/10/edit" for 127.0.0.1 at 2019-01-29 20:02:01 +0100
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/edit.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.2ms)
+  Rendered orders/edit.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 64ms (Views: 61.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:02:03 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:02:04 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:02:06 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:02:29 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:02:30 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 44.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:02:33 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 55ms (Views: 51.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:02:41 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 57ms (Views: 53.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:02:43 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:02:52 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:02:53 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 44.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:02:55 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:02:59 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-29 20:03:01 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:42
+  Rendered products/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:03:10 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:03:54 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:03:55 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 51ms (Views: 49.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-29 20:05:10 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:05:12 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 52ms (Views: 49.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:05:13 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (3.2ms)
+  Rendered orders/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:05:19 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:05:23 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-01-29 20:05:26 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yJQoc73rmKayuNTd4/BkiGZ/4ilXoEOXAPSGBQvWkH9bE6Ylg7PjBGJ1lUiJ6EIp2vfeJak2JikW/P3EIp/1zQ=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:05:26 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-29 20:05:27 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 53ms (Views: 51.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at 2019-01-29 20:05:32 +0100
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 65ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-29 20:05:40 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  Rendered products/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 50ms (Views: 47.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:06:57 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-01-29 20:06:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-01-29 20:07:02 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MqF899gXdmBQps8LZh1sclaJZZGMIRNP7BGxW5B/HQK8ELWeLRYDg0wBx8K6e463FKOqY+Fxp44y9xoVO0Lj8Q==", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@admin.com"], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 132ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:07:02 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:07:05 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (3.4ms)
+  Rendered orders/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2019-01-29 20:07:14 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HsE8wwVEDR/4fCmn0Qi9dPLfY+Nu+Xh5y0LmG7PKCBNG/qpsT1eUiL6ZBJ8rln7aVlYKHeR/5QEN2ywLknHxYA==", "order"=>{"breadtype"=>"White bread", "ingredient"=>"Ham", "vegetable"=>["Tomato", "Lettuce", "Onions", "Cucumber"], "condiment"=>"Ketchup", "amount"=>"2"}, "commit"=>"Create Order"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:30
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("breadtype", "ingredient", "vegetable", "condiment", "amount", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["breadtype", "White bread"], ["ingredient", "Ham"], ["vegetable", "Tomato, Lettuce, Onions, Cucumber"], ["condiment", "Ketchup"], ["amount", 2], ["created_at", "2019-01-29 19:07:14.685975"], ["updated_at", "2019-01-29 19:07:14.685975"]]
+  ↳ app/controllers/orders_controller.rb:30
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:30
+Redirected to http://localhost:3000/orders/11
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/orders/11" for 127.0.0.1 at 2019-01-29 20:07:14 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:11:04 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 54ms (Views: 51.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:11:07 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 53ms (Views: 49.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:11:08 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 60ms (Views: 57.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:11:16 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 52ms (Views: 48.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:11:17 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:12:37 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:12:38 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 55ms (Views: 51.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:12:54 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (String can't be coerced into Integer):
+    27: 
+    28: <p>
+    29:   <strong>Price:</strong>
+    30:   <%= @order.price = @order.amount*5 + "Euro" %>
+    31: </p>
+    32: 
+    33: 
+  
+app/views/orders/show.html.erb:30:in `+'
+app/views/orders/show.html.erb:30:in `_app_views_orders_show_html_erb___3857511621076329276_70274158498000'
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:13:18 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 54ms (Views: 50.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:13:25 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:13:26 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:13:46 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:13:56 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:13:58 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/11" for 127.0.0.1 at 2019-01-29 20:13:59 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 48ms (Views: 44.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:14:01 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:14:14 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 53.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:14:16 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/10/edit" for 127.0.0.1 at 2019-01-29 20:14:18 +0100
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/edit.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.7ms)
+  Rendered orders/edit.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:14:21 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 51ms (Views: 48.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:15:35 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.4ms)
+  Rendered orders/new.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    50: 
+    51:   <div class="field">
+    52:     <%= form.label :price %>
+    53:     <%= @order.price = @order.amount*3  %>  €
+    54:   </div>
+    55: 
+    56: 
+  
+app/views/orders/_form.html.erb:53:in `block in _app_views_orders__form_html_erb__2762855015630000450_70274090073380'
+app/views/orders/_form.html.erb:1:in `_app_views_orders__form_html_erb__2762855015630000450_70274090073380'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274153110660'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:15:43 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.6ms)
+  Rendered orders/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    50: 
+    51:   <div class="field">
+    52:     <%= form.label :price %>
+    53:     <%= @order.price = @order.amount*3  %> 
+    54:   </div>
+    55: 
+    56: 
+  
+app/views/orders/_form.html.erb:53:in `block in _app_views_orders__form_html_erb__2762855015630000450_70274139036160'
+app/views/orders/_form.html.erb:1:in `_app_views_orders__form_html_erb__2762855015630000450_70274139036160'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274116807020'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:16:17 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.9ms)
+  Rendered orders/new.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    50: 
+    51:   <div>
+    52:     <strong>Total Price:</strong>
+    53:     <%= @order.price = @order.amount*3  %>
+    54:   </div>
+    55: 
+    56: 
+  
+app/views/orders/_form.html.erb:53:in `block in _app_views_orders__form_html_erb__2762855015630000450_70274108275200'
+app/views/orders/_form.html.erb:1:in `_app_views_orders__form_html_erb__2762855015630000450_70274108275200'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274160305020'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:16:18 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.3ms)
+  Rendered orders/new.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    50: 
+    51:   <div>
+    52:     <strong>Total Price:</strong>
+    53:     <%= @order.price = @order.amount*3  %>
+    54:   </div>
+    55: 
+    56: 
+  
+app/views/orders/_form.html.erb:53:in `block in _app_views_orders__form_html_erb__2762855015630000450_70274158871040'
+app/views/orders/_form.html.erb:1:in `_app_views_orders__form_html_erb__2762855015630000450_70274158871040'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274158905340'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:16:37 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.2ms)
+  Rendered orders/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    50: 
+    51:   <div>
+    52:     <strong>Total Price:</strong>
+    53:     <%= @order.amount*3  %>
+    54:   </div>
+    55: 
+    56: 
+  
+app/views/orders/_form.html.erb:53:in `block in _app_views_orders__form_html_erb__2762855015630000450_70274172813100'
+app/views/orders/_form.html.erb:1:in `_app_views_orders__form_html_erb__2762855015630000450_70274172813100'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274172855440'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:16:38 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.8ms)
+  Rendered orders/new.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    50: 
+    51:   <div>
+    52:     <strong>Total Price:</strong>
+    53:     <%= @order.amount*3  %>
+    54:   </div>
+    55: 
+    56: 
+  
+app/views/orders/_form.html.erb:53:in `block in _app_views_orders__form_html_erb__2762855015630000450_70274090300540'
+app/views/orders/_form.html.erb:1:in `_app_views_orders__form_html_erb__2762855015630000450_70274090300540'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274090344780'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:16:46 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (2.9ms)
+  Rendered orders/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:23:43 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 57ms (Views: 54.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:23:46 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (3.8ms)
+  Rendered orders/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 58ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:24:03 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.8ms)
+  Rendered orders/new.html.erb within layouts/application (6.6ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    56: 
+    57: <div>
+    58:   <strong>Total Price:</strong>
+    59:   <%= @order.price = @order.amount*3  %>
+    60: </div>
+  
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274154004740'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274154028860'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:26:12 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.7ms)
+  Rendered orders/new.html.erb within layouts/application (6.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    57: <div>
+    58:   <strong>Total Price:</strong>
+    59:   <%= @order.price = 0 %>
+    60:   <%= @order.price = @order.amount*3  %>
+    61: </div>
+  
+app/views/orders/_form.html.erb:60:in `_app_views_orders__form_html_erb__2762855015630000450_70274152532860'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274152566140'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:26:14 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.5ms)
+  Rendered orders/new.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    57: <div>
+    58:   <strong>Total Price:</strong>
+    59:   <%= @order.price = 0 %>
+    60:   <%= @order.price = @order.amount*3  %>
+    61: </div>
+  
+app/views/orders/_form.html.erb:60:in `_app_views_orders__form_html_erb__2762855015630000450_70274086148800'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274086278260'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:26:22 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (2.8ms)
+  Rendered orders/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 49ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:26:23 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (2.6ms)
+  Rendered orders/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:26:25 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (2.8ms)
+  Rendered orders/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:26:46 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.1ms)
+  Rendered orders/new.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    57: <div>
+    58:   <strong>Total Price:</strong>
+    59:   <%= @order.price = 0 %>
+    60:   <%= @order.price = @order.amount + 1 %>
+    61: </div>
+  
+app/views/orders/_form.html.erb:60:in `_app_views_orders__form_html_erb__2762855015630000450_70274151764400'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274151798100'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:27:28 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.7ms)
+  Rendered orders/new.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    58:   <strong>Total Price:</strong>
+    59:   <%= @order.price = 0 %>
+    60:   <%= @harga = 3 %>
+    61:   <%= @order.price = @order.amount * @harga  %>
+    62: </div>
+  
+app/views/orders/_form.html.erb:61:in `_app_views_orders__form_html_erb__2762855015630000450_70274171775060'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274171809120'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:27:29 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.6ms)
+  Rendered orders/new.html.erb within layouts/application (6.3ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    58:   <strong>Total Price:</strong>
+    59:   <%= @order.price = 0 %>
+    60:   <%= @harga = 3 %>
+    61:   <%= @order.price = @order.amount * @harga  %>
+    62: </div>
+  
+app/views/orders/_form.html.erb:61:in `_app_views_orders__form_html_erb__2762855015630000450_70274153267520'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274153283820'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:29:32 +0100
+Processing by OrdersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `*' for nil:NilClass):
+  
+app/models/order.rb:7:in `<class:Order>'
+app/models/order.rb:1:in `<main>'
+app/controllers/orders_controller.rb:17:in `new'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:29:33 +0100
+Processing by OrdersController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `*' for nil:NilClass):
+  
+app/models/order.rb:7:in `<class:Order>'
+app/models/order.rb:1:in `<main>'
+app/controllers/orders_controller.rb:17:in `new'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:30:13 +0100
+Processing by OrdersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `amount' for nil:NilClass):
+  
+app/models/order.rb:7:in `<class:Order>'
+app/models/order.rb:1:in `<main>'
+app/controllers/orders_controller.rb:17:in `new'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:35:12 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (3.3ms)
+  Rendered orders/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 58ms (Views: 46.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:36:14 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (278.9ms)
+  Rendered orders/new.html.erb within layouts/application (280.7ms)
+Completed 500 Internal Server Error in 288ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `total_price' for #<#<Class:0x00007fd3f61c4608>:0x00007fd3f3f9a3e8>):
+    56: 
+    57: <div>
+    58:   <strong>Total Price:</strong>
+    59:   <%= total_price %>
+    60: 
+    61: </div>
+  
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274153992420'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274154026620'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:37:58 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (375.4ms)
+  Rendered orders/new.html.erb within layouts/application (377.5ms)
+Completed 500 Internal Server Error in 384ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `total_price' for #<#<Class:0x00007fd3f61c4608>:0x00007fd3ebfda9c8>):
+    56: 
+    57: <div>
+    58:   <strong>Total Price:</strong>
+    59:   <%= total_price %>
+    60: 
+    61: </div>
+  
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274158429380'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274087049640'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:37:59 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (244.1ms)
+  Rendered orders/new.html.erb within layouts/application (246.1ms)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `total_price' for #<#<Class:0x00007fd3f61c4608>:0x00007fd3f5855720>):
+    56: 
+    57: <div>
+    58:   <strong>Total Price:</strong>
+    59:   <%= total_price %>
+    60: 
+    61: </div>
+  
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274166919720'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274166992920'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:40:11 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.4ms)
+  Rendered orders/new.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    56: 
+    57: <div>
+    58:   <strong>Total Price:</strong>
+    59:   <% total_price %>
+    60: 
+    61: </div>
+  
+app/controllers/orders_controller.rb:65:in `total_price'
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274139787640'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274139724920'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:40:12 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.4ms)
+  Rendered orders/new.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    56: 
+    57: <div>
+    58:   <strong>Total Price:</strong>
+    59:   <% total_price %>
+    60: 
+    61: </div>
+  
+app/controllers/orders_controller.rb:65:in `total_price'
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274172860520'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274172723260'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:40:32 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (3.9ms)
+  Rendered orders/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 69ms (Views: 58.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:40:33 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 66ms (Views: 63.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:40:35 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:40:37 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 58ms (Views: 54.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/11" for 127.0.0.1 at 2019-01-29 20:40:38 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:67
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 77ms (Views: 73.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:40:39 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 53ms (Views: 49.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:41:07 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:41:12 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.4ms)
+  Rendered orders/new.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    56: 
+    57: <p>
+    58:   <strong>Total Price:</strong>
+    59:   <%= @order.price = @order.amount*3  %>  €
+    60: </p>
+  
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274090934420'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274167366460'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:42:55 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.9ms)
+  Rendered orders/new.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    56: 
+    57: <p>
+    58:   <strong>Total Price:</strong>
+    59:   <%= total_price %>  €
+    60: </p>
+  
+app/controllers/orders_controller.rb:65:in `total_price'
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274089260380'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274089284740'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:42:56 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.0ms)
+  Rendered orders/new.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    56: 
+    57: <p>
+    58:   <strong>Total Price:</strong>
+    59:   <%= total_price %>  €
+    60: </p>
+  
+app/controllers/orders_controller.rb:65:in `total_price'
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274168846440'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274120718700'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:42:57 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (4.9ms)
+  Rendered orders/new.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    56: 
+    57: <p>
+    58:   <strong>Total Price:</strong>
+    59:   <%= total_price %>  €
+    60: </p>
+  
+app/controllers/orders_controller.rb:65:in `total_price'
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274140762420'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274140770360'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:43:21 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.0ms)
+  Rendered orders/new.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    56: 
+    57: <p>
+    58:   <strong>Total Price:</strong>
+    59:   <%= total_price %>  €
+    60: </p>
+  
+app/controllers/orders_controller.rb:65:in `total_price'
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274086117000'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274086247760'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:43:22 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.6ms)
+  Rendered orders/new.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    56: 
+    57: <p>
+    58:   <strong>Total Price:</strong>
+    59:   <%= total_price %>  €
+    60: </p>
+  
+app/controllers/orders_controller.rb:65:in `total_price'
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274167668340'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274167686360'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:48:10 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (5.2ms)
+  Rendered orders/new.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `*' for nil:NilClass):
+    56: 
+    57: <p>
+    58:   <strong>Total Price:</strong>
+    59:   <%= total_price %>  €
+    60: </p>
+  
+app/controllers/orders_controller.rb:65:in `total_price'
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274158560160'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274158594840'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:48:20 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (267.3ms)
+  Rendered orders/new.html.erb within layouts/application (269.5ms)
+Completed 500 Internal Server Error in 285ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `total_price' for #<#<Class:0x00007fd3f5b968a8>:0x00007fd3f5b94e68>):
+    56: 
+    57: <p>
+    58:   <strong>Total Price:</strong>
+    59:   <%= total_price %>  €
+    60: </p>
+  
+app/views/orders/_form.html.erb:59:in `_app_views_orders__form_html_erb__2762855015630000450_70274168662800'
+app/views/orders/new.html.erb:3:in `_app_views_orders_new_html_erb___3843609772878449762_70274168698960'
+Started GET "/orders/new" for 127.0.0.1 at 2019-01-29 20:48:36 +0100
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (2.7ms)
+  Rendered orders/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 51ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:48:38 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 49ms (Views: 45.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/orders/10" for 127.0.0.1 at 2019-01-29 20:48:39 +0100
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:68
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 65ms (Views: 59.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2019-01-29 20:48:40 +0100
+Processing by OrdersController#index as HTML
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 59ms (Views: 55.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:48:41 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2019-01-29 20:48:43 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:42
+  Rendered products/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 51ms (Views: 45.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:48:44 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2019-01-29 20:48:46 +0100
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/ikhsanhabibi/.rvm/gems/ruby-2.5.3/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 56ms (Views: 53.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-29 20:48:47 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/index.html.erb:3
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 53ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+

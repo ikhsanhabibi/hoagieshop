@@ -25,5 +25,11 @@
   <%= @order.amount %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
+<p>
+  <strong>Total Price:</strong>
+  <%= @order.price = @order.amount*3  %>  €
+</p>
+
+
+<!--<%#= link_to 'Edit', edit_order_path(@order) %> |-->
 <%= link_to 'Back', orders_path %>
