@@ -4,6 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :name
       t.boolean :vegan
       t.string :category_id
+      t.text :desc
 
       t.timestamps
     end

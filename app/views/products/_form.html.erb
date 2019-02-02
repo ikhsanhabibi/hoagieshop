@@ -17,7 +17,7 @@
   </div>
 
   <div class="field">
-    <%= form.label :Description %>
+    <%= form.label :desc %>
     <%= form.text_area :desc %>
   </div>
 
@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label :category_id %>
-    <%= select_tag "category_id", options_for_select(@categories), prompt: "Select one!" %>
+    <%= select_tag "category_id", options_for_select(@categories), prompt: "Select one" %>
   </div>
 
   <div class="actions">

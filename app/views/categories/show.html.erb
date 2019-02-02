@@ -15,7 +15,6 @@
 <li> <%= product.name %> </li>
 <% end %>
 
-<% if current_user.admin %>
+<% if current_user && current_user.admin %>
 <%= link_to 'Edit', edit_category_path(@category) %>
 <% end %><tr>
-<%= link_to 'Back', categories_path %>

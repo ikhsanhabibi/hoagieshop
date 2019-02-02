@@ -11,6 +11,11 @@
 </p>
 
 <p>
+  <strong>Description:</strong>
+  <%= @product.desc %>
+</p>
+
+<p>
   <strong>Category:</strong>
   <%= link_to Category.find(@product.category_id).name, category_path(@product.category_id) %>
 </p>

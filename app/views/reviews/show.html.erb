@@ -8,10 +8,9 @@
   <%# Display full and blank stars depend on the rating value%>
 <p>
   <strong>Rating:</strong>
-  <% if current_user %>
-  Taste: <%= rating_for @order, 'taste' %>
-  Price: <%= rating_for @order, 'price' %>
-  <% end %>
+  <% @review.rating.to_i.times do  %>
+ <span class="glyphicon glyphicon-star"></span>
+<% end %>
 </p>
 
 <p>
@@ -19,5 +18,8 @@
   <%= image_tag @review.image.thumb.url%>
 </p>
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
+<% if current_user && current_user.admin %>
+<%= link_to 'Edit', edit_review_path(@review) %>
+<% end %>
+<br>
 <%= link_to 'Back', reviews_path %>

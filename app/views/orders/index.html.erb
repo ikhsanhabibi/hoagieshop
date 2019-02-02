@@ -1,38 +1,100 @@
-<p id="notice"><%= notice %></p>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Hoagie Online Shop </title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <h1> Hoagie Online Shop </h1>
+        <hr>
+      </section>  
+      <nav>
+        <ul>
+          <% if current_user %>
+    <li><%= link_to 'Home', root_path %></li>
 
-<h1>Orders</h1>
+    <li><%= link_to 'Products', products_path %></li>
 
-<table>
+    <li><%= link_to 'Your Orders', orders_path, class: "active" %></li>
+
+    <li><%= link_to 'Change Personal Details',edit_user_registration_path %></li>
+
+    <li><%= link_to 'Reviews', reviews_path %></li> 
+
+    <li><%= link_to 'About Us', aboutus_index_path %></li>
+
+    <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+
+  
+
+<% else %>
+    <li><%= link_to 'Home', root_path, class: "active" %></li>
+
+    <li><%= link_to 'Products', products_path %></li>
+
+    <li><%= link_to 'Reviews', reviews_path %></li> 
+
+    <li><%= link_to 'About Us', aboutus_index_path %></li> 
+
+    <li><%= link_to 'Products', products_path %></li>
+
+    <li><%= link_to 'Sign up', new_user_registration_path %></li>
+
+    <li><%= link_to 'Sign in', new_user_session_path %></li>
+<% end %>
+
+        </ul>
+      </nav>
+      <hr>
+    </header>
+    <main>
+      <figure>
+        <%= image_tag("order", height: '290', width: '580', class: "bild") %>
+      </figure>
+      <section>
+        <table align="center">
   <thead>
-    <tr>
-      <th>Breadtype</th>
-      <th>Ingredient</th>
-      <th>Vegetable</th>
-      <th>Condiment</th>
-      <th>Amount</th>
-      <th colspan="3"></th>
-    </tr>
+    <div class="row">
+  <div class="col-sm-2"><span class="label label-primary">Breadtype</span></div>
+  <div class="col-sm-2"><span class="label label-warning">Ingredient</span></div>
+  <div class="col-sm-2"><span class="label label-success">Vegetable</span></div>
+  <div class="col-sm-2"><span class="label label-danger">Condiment</span></div>
+  <div class="col-sm-1"><span class="label label-default">Amout</span></div>
+  <div class="col-sm-3"></div>
+</div>
   </thead>
 
   <tbody>
     <% @orders.each do |order| %>
-      <tr>
-        <td><%= order.breadtype %></td>
-        <td><%= order.ingredient %></td>
-        <td><%= order.vegetable %></td>
-        <td><%= order.condiment %></td>
-        <td><%= order.amount %></td>
-        <td><%= link_to 'Show', order %></td>
-        <td><%= link_to 'Edit', edit_order_path(order) %></td>
-<!--        <td><%#= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-
-      </tr>
+      <div class="row">
+  <div class="col-sm-2"><%= order.breadtype %></div>
+  <div class="col-sm-2"><%= order.ingredient %></div>
+  <div class="col-sm-2"><%= order.vegetable %></div>
+  <div class="col-sm-2"><%= order.condiment %></div>
+  <div class="col-sm-1"><%= order.amount %></div>
+  <div class="col-sm-3">
+        <%= link_to 'Show', order %> |
+        <%= link_to 'Edit', edit_order_path(order) %> |
+        <%= link_to 'Delete', method: :delete, data: { confirm: 'Are you sure?' } %></div>
+</div>
     <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'Make an order', new_order_path %>
-<br>
-<%= link_to "Back", root_path %>
+<%= link_to 'Make an order', new_order_path, class: "btn btn-primary btn-lg btn-block", role:"button" %>
+      </section>
+      <hr>
+    </main>
+    <footer> 
+      <h3> You will find us here: </h3>
+       <div>
+        <a href="https://www.facebook.com/" target="blank1"><%= image_tag("facebook", :size => "40x40") %></a>
+        <a href="https://instagram.com/" target="blank2"><%= image_tag("instagram", :size => "40x40") %></a>
+        <a href="https://www.twitter.com/" target="blank3"><%= image_tag("twitter", :size => "40x40") %></a>
+       <div>
+    </footer>
+  </body> 
+</html>

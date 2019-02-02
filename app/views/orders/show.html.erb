@@ -30,9 +30,22 @@
   <%= @order.price = @order.amount*3  %>  €
 </p>
 
-  Taste: <%= rating_for_user @order, current_user, 'taste',disable_after_rate: true, imdb_avg: true %>
-  Price: <%= rating_for_user @order, current_user, 'price', disable_after_rate: true, imdb_avg: true %>
+<%= form_tag charges_path do %>
+  <article>
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+  </article>
 
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="Hoagie Order"
+          data-locale="auto"
+          data-currency="EUR"
+          data-shipping-address="true"></script>
+<% end %>
 
 <!--<%#= link_to 'Edit', edit_order_path(@order) %> |-->
 <%= link_to 'Back', orders_path %>

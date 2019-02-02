@@ -16,9 +16,11 @@
     
     <li><%= link_to 'Products', products_path %></li>
 
-    <li><%= link_to 'Make an order',new_order_path %></li>
+    <li><%= link_to 'Your Orders', orders_path %></li>
 
     <li><%= link_to 'Change Personal Details',edit_user_registration_path %></li>
+
+    <li><%= link_to 'Reviews', reviews_path %></li>
     
     <li><%= link_to 'About Us', aboutus_index_path, class: "active" %></li>
 
@@ -29,13 +31,11 @@
 <% else %>
     <li><%= link_to 'Home', root_path %></li>
 
-    <li><a href="Ingredients.html" target="_self"> Ingredients</a></li>
+    <li><%= link_to 'Products', products_path %></li>
 
-    <li><a href="Reviews.html" target="_self"> Reviews </a></li>
+    <li><%= link_to 'Reviews', reviews_path %></li>
 
     <li><%= link_to 'About Us', aboutus_index_path, class: "active" %></li> 
-
-    <li><%= link_to 'Products', products_path %></li>
 
     <li><%= link_to 'Sign up', new_user_registration_path %></li>
 
