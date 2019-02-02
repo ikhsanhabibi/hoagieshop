@@ -7,7 +7,9 @@
     <header>
       <section>
         <h1> About us</h1>
-        <hr>
+        <% if current_user %>
+          <h4>Hello <%= current_user.name %>!</h4>
+        <% end %>
       </section>
       <nav>
         <ul>

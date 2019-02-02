@@ -6,8 +6,10 @@
   <body>
     <header>
       <section>
-        <h1> OUR PRODUCTS </h1>
-        <hr>
+        <h1> Our Products</h1>
+        <% if current_user %>
+          <h4>Hello <%= current_user.name %>!</h4>
+        <% end %>
       </section>  
       <nav>
         <ul>
