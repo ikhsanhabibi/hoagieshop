@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <title> ABOUT US </title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <h1> About us</h1>
+        <% if current_user %>
+          <h4>Hello <%= current_user.name %>!</h4>
+        <% end %>
+      </section>
+      <nav>
+        <ul>
+          <% if current_user %>
+    <li><%= link_to 'Home', root_path %></li>
+    
+    <li><%= link_to 'Products', products_path %></li>
+
+    <li><%= link_to 'Your Orders', orders_path %></li>
+
+    <li><%= link_to 'Change Personal Details',edit_user_registration_path %></li>
+
+    <li><%= link_to 'Reviews', reviews_path %></li>
+    
+    <li><%= link_to 'About Us', aboutus_index_path, class: "active" %></li>
+
+    <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+
+  
+
+<% else %>
+    <li><%= link_to 'Home', root_path %></li>
+
+    <li><%= link_to 'Products', products_path %></li>
+
+    <li><%= link_to 'Reviews', reviews_path %></li>
+
+    <li><%= link_to 'About Us', aboutus_index_path, class: "active" %></li> 
+
+    <li><%= link_to 'Sign up', new_user_registration_path %></li>
+
+    <li><%= link_to 'Sign in', new_user_session_path %></li>
+<% end %>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+    <main>
+    
+      <section>
+      <h2> CONTACT </h2><br><br>
+      <h3> Address: Wilhelminenhofstraße 75A, 12459 Berlin<br>
+            <br>Telephone: (030) 5019 - 0<br>
+            <br>E-mail: hoagieonlineshop@gmail.com<br></p><br><br></h3>
+      
+      </section>  
+      <section>
+        <h2> CUSTOMER FEEDBACK </h2>
+        <p> Please take a few minutes to give us feedback about our service by filling in this short Customer Feedback Form.We are conducting this customer feedback research in order to gauge your level of satisfaction with the quality of our service. 
+        <br>We thank you four your participation!  </p>
+        <form>
+          <fieldset>
+            <legend> How would you rate your overall experience with our service? </legend>
+            <label> Very Good <input type="radio" name="Experience Rate"/></label>
+            <label> Good <input type="radio" name="Experience Rate"/></label>
+            <label> Fair <input type="radio" name="Experience Rate"/></label>
+            <label> Poor <input type="radio" name="Experience Rate"/></label>
+            <label>  Very Poor <input type="radio" name="Experience Rate"/></label>
+          </fieldset>
+          <fieldset>
+            <legend> Do you prefer vegetarian or meat-based food? </legend>
+            <label> Meat-based<input type="radio" name="Eat Art"/></label>
+            <label> Vegetarian <input type="radio" name="Eat Art"/></label>
+          </fieldset>
+          <fieldset>
+            <legend> Are you female od male? </legend>
+            <label> Female<input type="radio" name="Gender"/></label>
+            <label> Male <input type="radio" name="Gender"/></label>
+          </fieldset>
+          <fieldset>
+            <legend> How old are you? </legend>
+            <label> 16-19<input type="checkbox" name="Age"/></label>
+            <label> 20-25 <input type="checkbox" name="Age"/></label>
+            <label> 25-30 <input type="checkbox" name="Age"/></label>
+            <label> 30+<input type="checkbox" name="Age"/></label>
+          </fieldset>
+          <fieldset>
+            <legend> Is it better to use an app or the website? </legend>
+            <label> Mobile App <input type="checkbox" name="App/Web"/></label>
+            <label> Website <input type="checkbox" name="App/Web"/></label>
+          </fieldset>
+          <fieldset>
+            <input type="reset" name="Reset"/>
+            <input type="submit" name="Submit"/>
+          </fieldset>
+        </form>
+      </section>    
+    </main>
+    <footer> 
+    <br><br>
+    
+      <h3> You will find us here: </h3>
+      <div class="social">
+        <a href="https://www.facebook.com/" target="blank1"><%= image_tag("facebook", :size => "40x40") %></a>
+        <a href="https://instagram.com/" target="blank2"><%= image_tag("instagram", :size => "40x40") %></a>
+        <a href="https://www.twitter.com/" target="blank3"><%= image_tag("twitter", :size => "40x40") %></a>
+
+      </div>
+    </footer>
+  </body> 
+</html>

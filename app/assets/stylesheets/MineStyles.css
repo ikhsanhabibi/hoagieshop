@@ -1,0 +1,175 @@
+* { box-sizing: border-box;
+}
+
+body { 
+	font-family: "Times New Roman";
+	font-size: 16px;
+	text-align:center;
+  background-image: image_url('icons.png');
+	border-color: grey;
+	border-style:solid;
+	border-width: 3px;
+	margin: 5% 15%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+ }
+
+ header, main, footer {
+	background-color: hsla(57, 75%, 74%, 0.25);
+	overflow: hidden;
+	margin: 0;
+	flex: 1;	
+ }
+
+ h1 { font-family: "Times New Roman";
+	font-size: 250%;
+	text-align: center;
+	color: #464343;
+	margin: 2%;
+	padding-left:2%;
+	
+ }
+ h2, h3 { 
+	font-size: 150%;
+	color: black;
+	text-align:center;
+	margin-left: 2%;
+	margin-top: 1%;
+	margin-bottom: 1%;	
+ }
+ 
+ h3{
+	 font-size:125%;
+ }
+
+ section {
+	margin-left:30%;
+	margin-right:30%;
+	text-align: center;
+ }
+
+ul {
+    list-style: none;
+    margin-top: 2%;
+	margin-bottom: 0;
+	margin-left: 2%;
+	margin-right: 2%;
+    overflow: hidden;
+    border: 2px solid grey;
+    background-color: hsla(57, 75%, 74%, 0.25);
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	padding: 0;
+	
+}
+
+.bild{
+	float: center;
+	width: 550px;
+	height: 290px;
+	margin-left:2%;
+	margin-right: 2%;
+	margin-bottom: 4%;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;	
+}
+
+li a:hover:not(.active) {
+    background-color: hsla(65, 75%, 74%, 0.5);
+}
+
+li a.active {
+    color: grey;
+    background-color: white;
+}
+
+div {
+	display:flex;
+	flex-direction:row;
+	justify-content: center;	
+}
+
+p{
+	text-align:center;
+}	
+.contact:hover {
+	width: 60px;
+    height: 60px;
+}
+
+footer {
+    height: 150px;
+	padding: 0;
+}
+/*About us*/
+
+div {
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+}
+
+.button {
+	width: 20%;
+	margin:1%;
+}
+.contact:hover {
+	width: 60px;
+    height: 60px;
+}
+.button:hover {
+	background-color: hsla(65, 75%, 74%, 0.5);
+	transition: 0.5s;
+}
+footer {
+    height: 150px;
+	padding-top: 2%;
+
+}
+
+/*Tabletgröße*/
+@media screen and (max-width: 1024px){
+	body { 
+	margin: 0;
+	border: 0;
+}
+}
+
+/*iPad und Mobilgeräte*/
+@media only screen and (max-width: 768px){
+	ul { 
+    margin: 0;
+	border: 0;
+	justify-content:space-around;
+  }
+}
+
+li a {
+	padding: 5px;
+}
+
+h1 {
+	font-size: 150%;
+	text-align:center;
+}
+
+figure {
+	text-align:center;
+}
+.button {
+	width: 50%;
+	margin:0;
+}
+
+
+table {
+  text-align: center;
+}
