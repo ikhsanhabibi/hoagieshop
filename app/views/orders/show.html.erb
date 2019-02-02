@@ -30,6 +30,9 @@
   <%= @order.price = @order.amount*3  %>  €
 </p>
 
+  Taste: <%= rating_for_user @order, current_user, 'taste',disable_after_rate: true, imdb_avg: true %>
+  Price: <%= rating_for_user @order, current_user, 'price', disable_after_rate: true, imdb_avg: true %>
+
 
 <!--<%#= link_to 'Edit', edit_order_path(@order) %> |-->
 <%= link_to 'Back', orders_path %>

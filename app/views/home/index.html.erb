@@ -1,28 +1,73 @@
-<h1>Welcome to Hoagieshop</h1>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Hoagie Online Shop </title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <h1> Hoagie Online Shop </h1>
+        <hr>
+      </section>  
+      <nav>
+        <ul>
+          <% if current_user %>
+    <li><%= link_to 'Home', root_path, class: "active" %></li>
 
-<% if current_user %>
-  <%= link_to 'Products', products_path %>
+    <li><%= link_to 'Products', products_path %></li>
 
-  <%= link_to 'Make an order',new_order_path %>
+    <li><%= link_to 'Make an order',new_order_path %></li>
 
-  <%= link_to 'Change Personal Details',edit_user_registration_path %>
+    <li><%= link_to 'Change Personal Details',edit_user_registration_path %></li>
 
-  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <li><%= link_to 'About Us', aboutus_index_path %></li>
+
+    <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
 
   
 
 <% else %>
-  <%= link_to 'Products', products_path %>
+    <li><%= link_to 'Home', root_path, class: "active" %></li>
 
-  <%= link_to 'Sign up', new_user_registration_path %>
+    <li><a href="Ingredients.html" target="_self"> Ingredients</a></li>
 
-  <%= link_to 'Sign in', new_user_session_path %>
+    <li><a href="Reviews.html" target="_self"> Reviews </a></li>
 
+    <li><%= link_to 'About Us', aboutus_index_path %></li> 
 
+    <li><%= link_to 'Products', products_path %></li>
+
+    <li><%= link_to 'Sign up', new_user_registration_path %></li>
+
+    <li><%= link_to 'Sign in', new_user_session_path %></li>
 <% end %>
 
-
-
+        </ul>
+      </nav>
+      <hr>
+    </header>
+    <main>
+      <figure>
+        <%= image_tag("hoagie.jpg", height: '290', width: '580', class: "bild") %>
+      </figure>
+      <section>
+        <h2>Choose your flavour mix!</h2>
+        <p>We want to build the Hoagie Online Shop that would be famous for providing food of consistently high quality and uniform methods of preparation.
+         We prepare your orders with love and passion!</p>
+        
+      </section>
+      <hr>
+    </main>
+    <footer> 
+      <h3> You will find us here: </h3>
+       <div>
+        <a href="https://www.facebook.com/" target="blank1"><%= image_tag("facebook", :size => "40x40") %></a>
+        <a href="https://instagram.com/" target="blank2"><%= image_tag("instagram", :size => "40x40") %></a>
+        <a href="https://www.twitter.com/" target="blank3"><%= image_tag("twitter", :size => "40x40") %></a>
+       <div>
+    </footer>
+  </body> 
+</html>
 
 
 

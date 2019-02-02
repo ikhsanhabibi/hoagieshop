@@ -63,3 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
+#image uploader
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick', '~> 4.3'
+gem 'ratyrate', github: 'wazery/ratyrate'

@@ -1,5 +1,53 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> EDIT USER ACCOUNT </title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <h1> EDIT USER </h1>
+        <hr>
+      </section>  
+      <nav>
+        <ul>
+          <% if current_user %>
+    <li><%= link_to 'Home', root_path %></li>
 
+    <li><%= link_to 'Products', products_path %></li>
+
+    <li><%= link_to 'Make an order',new_order_path %></li>
+
+    <li><%= link_to 'Change Personal Details',edit_user_registration_path, class: "active" %></li>
+
+    <li><%= link_to 'About Us', aboutus_index_path %></li>
+
+    <li><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></li>
+
+  
+
+<% else %>
+    <li><%= link_to 'Home', root_path, class: "active" %></li>
+
+    <li><a href="Ingredients.html" target="_self"> Ingredients</a></li>
+
+    <li><a href="Reviews.html" target="_self"> Reviews </a></li>
+
+    <li><%= link_to 'About Us', aboutus_index_path %></li> 
+
+    <li><%= link_to 'Products', products_path %></li>
+
+    <li><%= link_to 'Sign up', new_user_registration_path %></li>
+
+    <li><%= link_to 'Sign in', new_user_session_path %></li>
+<% end %>
+
+        </ul>
+      </nav>
+      <hr>
+    </header>
+  <main>
+    <h2> Change your personal details </h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
@@ -46,3 +94,5 @@
 <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
+</main>
+</body>

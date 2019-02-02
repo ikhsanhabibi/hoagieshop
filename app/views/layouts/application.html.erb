@@ -5,8 +5,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag  'MineStyles', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag  'normalize', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
@@ -14,4 +14,5 @@
     <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
+<%= javascript_include_tag "application", 'data-turbolinks-track' => false %>
 </html>
