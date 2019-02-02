@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_02_02_003706) do
     t.string "condiment"
     t.decimal "price"
     t.integer "amount"
+    t.boolean "delivery"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

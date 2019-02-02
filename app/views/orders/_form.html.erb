@@ -45,7 +45,12 @@
 
   <div class="field">
     <%= form.label :amount %>
-    <%= form.number_field :amount %>
+    <%= form.number_field :amount, min:"1", value:"1" %>
+  </div>
+
+  <div class="field">
+    <%= label_tag 'delivery', 'Delivery' %>
+    <%= check_box_tag 'order[delivery]', 'Delivery', id:'delivery' %>
   </div>
 
 
