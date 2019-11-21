@@ -65,6 +65,6 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 #image uploader
 gem 'carrierwave', '~> 1.0'
-gem 'mini_magick', '~> 4.3'
+gem 'mini_magick', '~> 4.9'
 gem 'ratyrate', github: 'wazery/ratyrate'
 gem 'stripe'
