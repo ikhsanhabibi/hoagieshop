@@ -1,6 +1,16 @@
 # README
 HTW Berlin - INFO3 Hoagie Shop Project by Manh Cuong Tran - Ikhsan Habibi - Julia Rakowiecka
 
+
+# How to run the project (On windows)?
+- Install Ruby: ruby '2.6.5'
+- Install gems: gem install bundler, gem install rails, gem install sqlite3
+- bundle install
+- bundle update
+- rails s
+- Open localhost:3000
+
+
 # Accounts for testing:
 member@example.com
 123456
