@@ -58530,3 +58530,181 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 471ms (Views: 462.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-01-06 23:20:13 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (320.2ms)
+Completed 200 OK in 497ms (Views: 487.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2020-01-06 23:20:15 +0100
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:69
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:79
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:79
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:79
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/products/index.html.erb:79
+  Rendered products/index.html.erb within layouts/application (36.1ms)
+Completed 200 OK in 165ms (Views: 147.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/reviews" for 127.0.0.1 at 2020-01-06 23:20:16 +0100
+Processing by ReviewsController#index as HTML
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:64
+  Rendered reviews/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 131ms (Views: 121.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/aboutus/index" for 127.0.0.1 at 2020-01-06 23:20:17 +0100
+Processing by AboutusController#index as HTML
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 120ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-01-06 23:20:18 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__633949146_120499800 at C:/Users/ikhsa/OneDrive/Dokumen/GitHub/hoagieshop/app/views/devise/registrations/new.html.erb:4)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (42.4ms)
+Completed 200 OK in 171ms (Views: 161.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-01-06 23:20:22 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 118ms (Views: 116.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-01-06 23:20:26 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__633949146_135469820 at C:/Users/ikhsa/OneDrive/Dokumen/GitHub/hoagieshop/app/views/devise/registrations/new.html.erb:4)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 118ms (Views: 117.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-01-06 23:20:26 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__633949146_132903180 at C:/Users/ikhsa/OneDrive/Dokumen/GitHub/hoagieshop/app/views/devise/registrations/new.html.erb:4)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 122ms (Views: 121.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-01-06 23:20:26 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__633949146_131300100 at C:/Users/ikhsa/OneDrive/Dokumen/GitHub/hoagieshop/app/views/devise/registrations/new.html.erb:4)
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 122ms (Views: 121.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-01-06 23:20:26 +0100
+Processing by Devise::RegistrationsController#new as HTML
+Started GET "/aboutus/index" for 127.0.0.1 at 2020-01-06 23:20:26 +0100
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb__633949146_129855520 at C:/Users/ikhsa/OneDrive/Dokumen/GitHub/hoagieshop/app/views/devise/registrations/new.html.erb:4)
+Processing by AboutusController#index as HTML
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.1ms)
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 176ms (Views: 174.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 173ms (Views: 168.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aboutus/index" for 127.0.0.1 at 2020-01-06 23:20:26 +0100
+Processing by AboutusController#index as HTML
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 119ms (Views: 116.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aboutus/index" for 127.0.0.1 at 2020-01-06 23:20:27 +0100
+Processing by AboutusController#index as HTML
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 121ms (Views: 118.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aboutus/index" for 127.0.0.1 at 2020-01-06 23:20:27 +0100
+Processing by AboutusController#index as HTML
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 125ms (Views: 121.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aboutus/index" for 127.0.0.1 at 2020-01-06 23:20:27 +0100
+Processing by AboutusController#index as HTML
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 110ms (Views: 106.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aboutus/index" for 127.0.0.1 at 2020-01-06 23:20:27 +0100
+Processing by AboutusController#index as HTML
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 127ms (Views: 124.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aboutus/index" for 127.0.0.1 at 2020-01-06 23:20:27 +0100
+Processing by AboutusController#index as HTML
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 119ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aboutus/index" for 127.0.0.1 at 2020-01-06 23:20:27 +0100
+Processing by AboutusController#index as HTML
+  Rendering aboutus/index.html.erb within layouts/application
+  Rendered aboutus/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 124ms (Views: 121.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-06 23:20:28 +0100
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 124ms (Views: 121.4ms | ActiveRecord: 0.0ms)
+
+

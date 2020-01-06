@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="development" uuid="d70418cb-f57a-4355-9677-63e8c35c72c4">
+    <data-source name="Rails hoagieshop: test" uuid="2cb23994-42b5-4d3b-86e7-417a5905086c">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <auth-required>false</auth-required>
+      <schema-mapping />
+    </data-source>
+    <data-source name="Rails hoagieshop: development" uuid="c74d9c33-5424-4abd-8123-7e50b653da9f">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
       <auth-required>false</auth-required>
       <schema-mapping />
