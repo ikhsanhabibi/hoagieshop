@@ -64,7 +64,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 #image uploader
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick', '~> 4.3'
 gem 'ratyrate', github: 'wazery/ratyrate'
 gem 'stripe'
